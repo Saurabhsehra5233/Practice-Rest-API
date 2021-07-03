@@ -34,17 +34,19 @@ public class MyController {
 
 
     @GetMapping("/courses/{courseId}")
- public Course getCourse(@PathVariable String courseId){
+ public Course getCourse(@PathVariable String courseId)
+     {
         return this.CourseService.getCourse(Long.parseLong(courseId));
- }
+     }
 
 
 
 
 
  @PostMapping("/course")
-    public Course addCourse(@RequestBody Course course){
+    public Course addCourse(@RequestBody Course course)
+    {
         return this.CourseService.addCourse(course);
- }
+    }
 
 }
